@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="118px" height="112px" viewBox="0 0 118 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>dex-order-book</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DEX-Copy-2" transform="translate(-433.000000, -2216.000000)">
+            <g id="dex-order-book" transform="translate(435.000000, 2218.000000)">
+                <path d="M41.6840211,92.6524421 C50.0559158,92.6524421 56.8419158,99.4393895 56.8419158,107.810337 L56.8419158,24.4419158 C56.8419158,16.0709684 50.0559158,9.28402105 41.6840211,9.28402105 L-0.000189473684,9.28402105 L-0.000189473684,92.6524421 L41.6840211,92.6524421 Z" id="Stroke-1" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M56.8419158,24.4419158 C56.8419158,16.0709684 63.6288632,9.28402105 71.9998105,9.28402105 L113.684021,9.28402105 L113.684021,92.6524421 L71.9998105,92.6524421 C63.6288632,92.6524421 56.8419158,99.4393895 56.8419158,107.810337" id="Stroke-3" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M15.1577053,28.2313895 L41.6840211,28.2313895" id="Stroke-5" stroke="#00E8B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M15.1577053,43.3892842 L41.6840211,43.3892842" id="Stroke-7" stroke="#00E8B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M15.1577053,58.5471789 L41.6840211,58.5471789" id="Stroke-9" stroke="#00E8B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M15.1577053,73.7050737 L41.6840211,73.7050737" id="Stroke-11" stroke="#00E8B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M71.9998105,58.5471789 L98.5261263,58.5471789" id="Stroke-13" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M71.9998105,73.7050737 L98.5261263,73.7050737" id="Stroke-15" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polygon id="Fill-17" fill="#00E8B4" points="73.8945474 -1.42108547e-14 73.8945474 41.6842105 85.2629684 34.1052632 96.6313895 41.6842105 96.6313895 -1.42108547e-14"></polygon>
+                <polygon id="Stroke-19" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="96.6313895 41.6842105 85.2629684 34.1052632 73.8945474 41.6842105 73.8945474 0 96.6313895 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

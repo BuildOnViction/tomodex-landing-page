@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'tomodex';
+  src:  url('fonts/tomodex.eot?2hf9n');
+  src:  url('fonts/tomodex.eot?2hf9n#iefix') format('embedded-opentype'),
+    url('fonts/tomodex.ttf?2hf9n') format('truetype'),
+    url('fonts/tomodex.woff?2hf9n') format('woff'),
+    url('fonts/tomodex.svg?2hf9n#tomodex') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="dex-"], [class*=" dex-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tomodex' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dex-settings_input_component:before {
+  content: "\e900";
+}
+.dex-settings_input_composite:before {
+  content: "\e900";
+}
+.dex-stay_current_portrait:before {
+  content: "\e901";
+}
+.dex-stay_primary_portrait:before {
+  content: "\e901";
+}
+.dex-smartphone:before {
+  content: "\e901";
+}
+.dex-desktop_mac:before {
+  content: "\e902";
+}
+.dex-play_circle_outline:before {
+  content: "\e903";
+}
+.dex-multiline_chart:before {
+  content: "\e904";
+}
