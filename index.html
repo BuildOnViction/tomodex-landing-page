@@ -94,8 +94,8 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="common-preview mb-5">
-                        <h2 class="common-title mr-4 mr-md-5">Market</h2>
-                        <p class="common-meta">42 coins listed</p>
+                        <h2 class="common-title mr-4 mr-md-5">Markets</h2>
+                        <p class="common-meta" id="number-coins"></p>
                         <a class="common-link" href="/markets">View all</a>
                     </div>
                     <div class="table-responsive">
@@ -109,36 +109,13 @@
                                 </tr>
                                 <tr><td></td></tr>
                             </thead>
-                            <tbody>
+                            <tbody id="markets-table-body">
                                 <tr>
-                                    <th scope="row"><strong>NEXO</strong> / BNB</th>
-                                    <td><span class="text-green">0.00627300</span><samp>$0.110837</samp></td>
-                                    <td><span class="text-green">+1.75%</span></td>
-                                    <td>11,010.00 BNB</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><strong>NEW</strong> / BNB</th>
-                                    <td><span class="text-green">0.00627300</span><samp>$0.110837</samp></td>
-                                    <td><span class="text-red">-4.17%</span></td>
-                                    <td>11,010.00 BNB</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><strong>VRAB</strong> / BNB</th>
-                                    <td><span class="text-green">0.00627300</span><samp>$0.110837</samp></td>
-                                    <td><span class="text-green">+1.75%</span></td>
-                                    <td>11,010.00 BNB</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><strong>RUNE</strong> / BNB</th>
-                                    <td><span class="text-green">0.00627300</span><samp>$0.110837</samp></td>
-                                    <td><span class="text-green">+1.75%</span></td>
-                                    <td>11,010.00 BNB</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><strong>NEXO</strong> / BNB</th>
-                                    <td><span class="text-green">0.00627300</span><samp>$0.110837</samp></td>
-                                    <td><span class="text-green">+1.75%</span></td>
-                                    <td>11,010.00 BNB</td>
+                                    <td colspan="4" class="text-center">
+                                        <div class="spinner-border text-info" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -446,9 +423,11 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bignumber.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/dex-custom.js"></script>
+    <script src="js/markets.js"></script>
 
 </body>
 
