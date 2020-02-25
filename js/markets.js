@@ -139,7 +139,9 @@
             return `
                 <tr>
                     <th scope="row">
-                        <strong>${item.baseTokenSymbol}</strong> / ${item.quoteTokenSymbol}
+                        <a href=${window.location.origin}/trade/${item.baseTokenSymbol}-${item.quoteTokenSymbol} />
+                            <strong>${item.baseTokenSymbol}</strong> / ${item.quoteTokenSymbol}
+                        </a>
                     </th>
                     <td>
                         <span class=${(item.change > 0) ? 'text-green' : (item.change < 0) ? 'text-red' : ''}>${BigNumber(item.price).toFormat(item.pricePrecision)}</span>
