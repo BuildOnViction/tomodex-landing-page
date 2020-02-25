@@ -104,11 +104,11 @@
             const change = (close - open)*100/close
             const changeText = (change > 0) ? `+${change.toFixed(2)}` : (change < 0) ? change.toFixed(2) : change
             const price = parsePrice(item.close, pair)
-            const priceUsd = parsePrice(item.closeBaseUsd, pair)
+            const priceUsd = item.closeBaseUsd
             const volume = parseAmount(item.volume, pair)
 
             const { pricePrecision } = calcPrecision(price)
-            const { priceUsdPrecision } = calcPrecision(priceUsd)
+            const { pricePrecision: priceUsdPrecision } = calcPrecision(priceUsd)
 
             return {
                 baseTokenSymbol: pair.baseTokenSymbol,
@@ -138,7 +138,9 @@
         const rows = data.slice(0, 5).map(item => {
             return `
                 <tr>
-                    <th scope="row"><strong>${item.baseTokenSymbol}</strong> / ${item.quoteTokenSymbol}</th>
+                    <th scope="row">
+                        <strong>${item.baseTokenSymbol}</strong> / ${item.quoteTokenSymbol}
+                    </th>
                     <td>
                         <span class=${(item.change > 0) ? 'text-green' : (item.change < 0) ? 'text-red' : ''}>${BigNumber(item.price).toFormat(item.pricePrecision)}</span>
                         <samp>$${BigNumber(item.priceUsd).toFormat(item.priceUsdPrecision)}</samp>
@@ -153,24 +155,28 @@
     }
 
     async function renderMakets() {
+        const { data, error } = await getMaketsStatistic()
+        if (error) return
+
+        document.getElementById('number-coins').innerHTML = `${data.length} coins listed`
+
+        const marketsStatisticParsed = parseMarketsStatistic(data)
+
+        const template = renderMarketsTableRows(marketsStatisticParsed)
+    
+        document.getElementById('markets-table-body').innerHTML = template
+    }
+
+    async function init() {
         const {data, error} = await getPairs()
         if (error) return
 
         pairs = data
 
-        setInterval(async _ => {        
-            const { data, error } = await getMaketsStatistic()
-            if (error) return
+        await renderMakets()
 
-            document.getElementById('number-coins').innerHTML = `${data.length} coins listed`
-
-            const marketsStatisticParsed = parseMarketsStatistic(data)
-
-            const template = renderMarketsTableRows(marketsStatisticParsed)
-        
-            document.getElementById('markets-table-body').innerHTML = template
-        }, 1000)
+        setInterval(renderMakets, 5000)
     }
 
-    renderMakets()
+    init()
 })(jQuery)
