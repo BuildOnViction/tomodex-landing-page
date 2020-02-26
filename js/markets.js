@@ -105,7 +105,7 @@
             const changeText = (change > 0) ? `+${change.toFixed(2)}` : (change < 0) ? change.toFixed(2) : change
             const price = parsePrice(item.close, pair)
             const priceUsd = item.closeBaseUsd
-            const volume = parseAmount(item.volume, pair)
+            const volume = parsePrice(item.volume, pair)
 
             const { pricePrecision } = calcPrecision(price)
             const { pricePrecision: priceUsdPrecision } = calcPrecision(priceUsd)
