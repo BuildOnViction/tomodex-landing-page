@@ -390,12 +390,13 @@ header.masthead .site-heading .subheading {
     background-color: #00E8B4;
     border-color: #00E8B4;
     color: #262C40;
+    box-shadow: 0 0 0!important;
 }
-
 .btn-primary-transparent {
     background-color: transparent;
     border-color: #00E8B4;
     color: #00E8B4;
+    box-shadow: 0 0 0!important;
 }
 
 .btn-primary-medium {
@@ -409,11 +410,15 @@ header.masthead .site-heading .subheading {
     border-width: 2px;
 }
 
+.btn-primary-medium:hover,
 .btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
 .btn-primary-transparent:hover {
-    color: #fff;
-    background-color: #0BB18C;
-    border-color: #0BB18C;
+    box-shadow: 0 0 0!important;
+    color: #fff!important;
+    background-color: #0BB18C!important;
+    border-color: #0BB18C!important;
     color: #ffffff !important;
 }
 
