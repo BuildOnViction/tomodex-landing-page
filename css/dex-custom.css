@@ -117,7 +117,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand img {
-    max-height: 50px;
+    height: 38px;
 }
 
 #mainNav .navbar-toggler {
