@@ -83,7 +83,8 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead d-flex align-items-center" style="background-image: url('assets/images/home-bg.png')">
+    <header class="masthead d-flex align-items-center" style="background-image: url('assets/images/visual-bg.png')">
+        <div class="visual-chart"><img src="assets/images/visual-chart.svg" alt="chart"></div>
         <div class="container">
             <div class="site-heading">
                 <h1>Instant Exchange<br>
@@ -104,32 +105,78 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="common-preview mb-5">
-                        <h2 class="common-title mr-4 mr-md-5">Markets</h2>
-                        <p class="common-meta" id="number-coins"></p>
-                        <a class="common-link" href="/markets">View all</a>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table tomodex-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Pair</th>
-                                    <th scope="col">Last Price</th>
-                                    <th scope="col">24H Change</th>
-                                    <th scope="col">24H Volume</th>
-                                </tr>
-                                <tr><td></td></tr>
-                            </thead>
-                            <tbody id="markets-table-body">
-                                <tr>
-                                    <td colspan="4" class="text-center">
-                                        <div class="spinner-border text-info" role="status">
-                                            <span class="sr-only">Loading...</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="accordion" id="accordionExample">
+                        <div class="inner-box">
+                            <div class="row align-items-center">
+                                <div class="col-4 col-lg-3">
+                                    <h2 class="common-title mr-4 mr-md-5">Markets</h2>
+                                </div>
+                                <div class="col-8 col-lg-9">
+                                    <span id="headingOne" class="p-3 cursor-pointer" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Tab1
+                                    </span>
+                                    <span id="headingTwo" class="p-3 cursor-pointer" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Tab2
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="common-preview my-3">
+                                    <p class="common-meta" id="number-coins">15 coins listed</p>
+                                    <a class="common-link" href="/markets">View all</a>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table tomodex-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Pair</th>
+                                                <th scope="col">Last Price</th>
+                                                <th scope="col">24H Change</th>
+                                                <th scope="col">24H Volume</th>
+                                            </tr>
+                                            <tr><td></td></tr>
+                                        </thead>
+                                        <tbody id="markets-table-body">
+                                            <tr>
+                                                <td colspan="4" class="text-center">
+                                                    <div class="spinner-border text-info" role="status">
+                                                        <span class="sr-only">Loading...</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="common-preview my-3">
+                                    <p class="common-meta" id="number-coins2">1509 coins listed</p>
+                                    <a class="common-link" href="/markets">View all</a>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table tomodex-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Pair2</th>
+                                                <th scope="col">Last Price2</th>
+                                                <th scope="col">24H Change2</th>
+                                                <th scope="col">24H Volume2</th>
+                                            </tr>
+                                            <tr><td></td></tr>
+                                        </thead>
+                                        <tbody id="markets-table-body">
+                                            <tr>
+                                                <td colspan="4" class="text-center">
+                                                    <div class="spinner-border text-info" role="status">
+                                                        <span class="sr-only">Loading...</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
