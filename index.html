@@ -83,8 +83,8 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead d-flex align-items-center" style="background-image: url('assets/images/visual-bg.png')">
-        <div class="visual-chart"><img src="assets/images/visual-chart.svg" alt="chart"></div>
+    <header class="masthead d-flex align-items-center" style="background-image: url('assets/images/home-bg.png')">
+        <!-- <div class="visual-chart"><img src="assets/images/visual-chart.svg" alt="chart"></div> -->
         <div class="container">
             <div class="site-heading">
                 <h1>Instant Exchange<br>
@@ -105,23 +105,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion" id="accordionMarkets">
                         <div class="inner-box">
-                            <div class="row align-items-center">
+                            <div class="row align-items-end">
                                 <div class="col-4 col-lg-3">
-                                    <h2 class="common-title mr-4 mr-md-5">Markets</h2>
+                                    <h2 class="common-title m-0">Markets</h2>
                                 </div>
                                 <div class="col-8 col-lg-9">
-                                    <span id="headingOne" class="p-3 cursor-pointer" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Tab1
+                                    <span id="MarketTabSpot" class="px-3 py-2 cursor-pointer" data-toggle="collapse" data-target="#contentTabSpot" aria-expanded="true" aria-controls="contentTabSpot">
+                                        Spot
                                     </span>
-                                    <span id="headingTwo" class="p-3 cursor-pointer" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Tab2
+                                    <span id="MarketTabLending" class="px-3 py-2 cursor-pointer collapsed" data-toggle="collapse" data-target="#contentTabLending" aria-expanded="false" aria-controls="contentTabLending">
+                                        Lending
                                     </span>
                                 </div>
                             </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="common-preview my-3">
+                            <div id="contentTabSpot" class="collapse show" aria-labelledby="MarketTabSpot" data-parent="#accordionMarkets">
+                                <div class="common-preview justify-content-between my-3">
                                     <p class="common-meta" id="number-coins">15 coins listed</p>
                                     <a class="common-link" href="/markets">View all</a>
                                 </div>
@@ -148,8 +148,8 @@
                                     </table>
                                 </div>
                             </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="common-preview my-3">
+                            <div id="contentTabLending" class="collapse" aria-labelledby="MarketTabLending" data-parent="#accordionMarkets">
+                                <div class="common-preview justify-content-between my-3">
                                     <p class="common-meta" id="number-coins2">1509 coins listed</p>
                                     <a class="common-link" href="/markets">View all</a>
                                 </div>
@@ -268,7 +268,22 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img class="w-100" src="assets/images/dex-video-tutorials-trading.png" alt="">
+                    <div class="accordion" id="accordionTrading">
+                        <div id="contentTabVideoSpot" class="collapse show" aria-labelledby="tabVideoSpot" data-parent="#accordionTrading">
+                            <img class="w-100" src="assets/images/dex-video-tutorials-trading.png" alt="">
+                        </div>
+                        <div id="contentTabVideoLending" class="collapse" aria-labelledby="tabVideoLending" data-parent="#accordionTrading">
+                            <img class="w-100" src="assets/images/dex-video-tutorials-trading.png" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span id="tabVideoSpot" class="p-3 cursor-pointer" data-toggle="collapse" data-target="#contentTabVideoSpot" aria-expanded="true" aria-controls="contentTabVideoSpot">
+                                Spot
+                            </span>
+                            <span id="tabVideoLending" class="p-3 cursor-pointer collapsed" data-toggle="collapse" data-target="#contentTabVideoLending" aria-expanded="false" aria-controls="contentTabVideoLending">
+                                Lending
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
