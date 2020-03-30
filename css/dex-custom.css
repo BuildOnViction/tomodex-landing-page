@@ -309,11 +309,9 @@ header.masthead .site-heading .subheading {
     cursor: pointer;
     font-weight: bold;
     color: #212529;
-    text-decoration: underline;
     opacity: .7;
 }
 .cursor-pointer.collapsed {
-    text-decoration: none;
     color: #004EA4;
     opacity: 1;
 }
