@@ -44,7 +44,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="/"><img src="assets/images/logo-tomochain-white.svg" alt="logo-tomodex"></a>
-            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="tab"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -105,76 +105,78 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="accordion" id="accordionMarkets">
-                        <div class="inner-box">
-                            <div class="row align-items-end">
-                                <div class="col-4 col-lg-3">
-                                    <h2 class="common-title m-0">Markets</h2>
-                                </div>
-                                <div class="col-8 col-lg-9">
-                                    <span id="MarketTabSpot" class="px-3 py-2 cursor-pointer" data-toggle="collapse" data-target="#contentTabSpot" aria-expanded="true" aria-controls="contentTabSpot">
-                                        Spot
-                                    </span>
-                                    <span id="MarketTabLending" class="px-3 py-2 cursor-pointer collapsed" data-toggle="collapse" data-target="#contentTabLending" aria-expanded="false" aria-controls="contentTabLending">
-                                        Lending
-                                    </span>
-                                </div>
+                    <div class="inner-box">
+                        <div class="row align-items-end">
+                            <div class="col-4 col-lg-3">
+                                <h2 class="common-title m-0">Markets</h2>
                             </div>
-                            <div id="contentTabSpot" class="collapse show" aria-labelledby="MarketTabSpot" data-parent="#accordionMarkets">
-                                <div class="common-preview justify-content-between my-3">
-                                    <p class="common-meta" id="number-coins">15 coins listed</p>
-                                    <a class="common-link" href="/markets">View all</a>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table tomodex-table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Pair</th>
-                                                <th scope="col">Last Price</th>
-                                                <th scope="col">24H Change</th>
-                                                <th scope="col">24H Volume</th>
-                                            </tr>
-                                            <tr><td></td></tr>
-                                        </thead>
-                                        <tbody id="markets-table-body">
-                                            <tr>
-                                                <td colspan="4" class="text-center">
-                                                    <div class="spinner-border text-info" role="status">
-                                                        <span class="sr-only">Loading...</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <div class="col-8 col-lg-9">
+                                <ul class="nav" id="MarketsTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="px-3 cursor-pointer active" id="spot-tab" data-toggle="tab" href="#dex-spot" role="tab" aria-controls="dex-spot" aria-selected="true">Spot</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="px-3 cursor-pointer" id="lending-tab" data-toggle="tab" href="#dex-lending" role="tab" aria-controls="dex-lending" aria-selected="false">Lending</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div id="contentTabLending" class="collapse" aria-labelledby="MarketTabLending" data-parent="#accordionMarkets">
-                                <div class="common-preview justify-content-between my-3">
-                                    <p class="common-meta" id="number-coins2">1509 coins listed</p>
-                                    <a class="common-link" href="/markets">View all</a>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table tomodex-table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Pair2</th>
-                                                <th scope="col">Last Price2</th>
-                                                <th scope="col">24H Change2</th>
-                                                <th scope="col">24H Volume2</th>
-                                            </tr>
-                                            <tr><td></td></tr>
-                                        </thead>
-                                        <tbody id="markets-table-body">
-                                            <tr>
-                                                <td colspan="4" class="text-center">
-                                                    <div class="spinner-border text-info" role="status">
-                                                        <span class="sr-only">Loading...</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="MarketsTabContent">
+                        <div class="tab-pane fade show active" id="dex-spot" role="tabpanel" aria-labelledby="spot-tab">
+                            <div class="common-preview justify-content-between my-3">
+                                <p class="common-meta" id="number-coins">15 coins listed</p>
+                                <a class="common-link" href="/markets">View all</a>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table tomodex-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Pair</th>
+                                            <th scope="col">Last Price</th>
+                                            <th scope="col">24H Change</th>
+                                            <th scope="col">24H Volume</th>
+                                        </tr>
+                                        <tr><td></td></tr>
+                                    </thead>
+                                    <tbody id="markets-table-body">
+                                        <tr>
+                                            <td colspan="4" class="text-center">
+                                                <div class="spinner-border text-info" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="dex-lending" role="tabpanel" aria-labelledby="lending-tab">
+                            <div class="common-preview justify-content-between my-3">
+                                <p class="common-meta" id="number-coins2">1509 coins listed</p>
+                                <a class="common-link" href="/markets">View all</a>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table tomodex-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Pair2</th>
+                                            <th scope="col">Last Price2</th>
+                                            <th scope="col">24H Change2</th>
+                                            <th scope="col">24H Volume2</th>
+                                        </tr>
+                                        <tr><td></td></tr>
+                                    </thead>
+                                    <tbody id="markets-table-body">
+                                        <tr>
+                                            <td colspan="4" class="text-center">
+                                                <div class="spinner-border text-info" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -268,22 +270,22 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="accordion" id="accordionTrading">
-                        <div id="contentTabVideoSpot" class="collapse show" aria-labelledby="tabVideoSpot" data-parent="#accordionTrading">
+                    <div class="tab-content" id="tradingTabContent">
+                        <div class="tab-pane fade show active" id="trading-spot" role="tabpanel" aria-labelledby="trading-spot-tab">
                             <img class="w-100" src="assets/images/dex-video-tutorials-trading.png" alt="">
                         </div>
-                        <div id="contentTabVideoLending" class="collapse" aria-labelledby="tabVideoLending" data-parent="#accordionTrading">
+                        <div class="tab-pane fade" id="trading-lending" role="tabpanel" aria-labelledby="trading-lending-tab">
                             <img class="w-100" src="assets/images/dex-video-tutorials-trading.png" alt="">
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <span id="tabVideoSpot" class="p-3 cursor-pointer" data-toggle="collapse" data-target="#contentTabVideoSpot" aria-expanded="true" aria-controls="contentTabVideoSpot">
-                                Spot
-                            </span>
-                            <span id="tabVideoLending" class="p-3 cursor-pointer collapsed" data-toggle="collapse" data-target="#contentTabVideoLending" aria-expanded="false" aria-controls="contentTabVideoLending">
-                                Lending
-                            </span>
                         </div>
                     </div>
+                    <ul class="nav justify-content-center p-3" id="tradingTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="px-3 cursor-pointer active" id="trading-spot-tab" data-toggle="tab" href="#trading-spot" role="tab" aria-controls="trading-spot" aria-selected="true">Spot</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="px-3 cursor-pointer" id="trading-lending-tab" data-toggle="tab" href="#trading-lending" role="tab" aria-controls="trading-lending" aria-selected="false">Lending</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

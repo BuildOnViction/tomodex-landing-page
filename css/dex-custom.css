@@ -306,14 +306,14 @@ header.masthead .site-heading .subheading {
 }
 
 .cursor-pointer {
+    color: #004EA4;
     cursor: pointer;
     font-weight: bold;
-    color: #212529;
-    opacity: .7;
-}
-.cursor-pointer.collapsed {
-    color: #004EA4;
     opacity: 1;
+}
+.cursor-pointer.active {
+    opacity: .7;
+    color: #212529;
 }
 @media only screen and (min-width: 992px) {
     .common-preview .common-title {
