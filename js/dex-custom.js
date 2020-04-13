@@ -38,4 +38,72 @@
       });
   }
 
+  // scroll onClick
+  $('#btn_scroll_to').on('click', function(event) {
+    $('html, body').animate({scrollTop: $("#watch-videos").offset().top}, 500);
+  });
+
+  // play video
+  $.fn.VideoPopUp = function (options) {
+    var defaults = {
+        backgroundColor: "#000000",
+        opener: "video",
+        maxweight: "640",
+        pausevideo: false,
+        idvideo: ""
+    };
+    var patter = this.attr('class');
+    var settings = $.extend({}, defaults, options);
+    var video = document.getElementsByClassName(settings.idvideo);
+    function stopVideo() {
+        var tag = $('.' + patter + '').get(0).tagName;
+        if (tag == 'video') {
+            video.pause();
+            video.currentTime = 0;
+        }
+    }
+    $('.' + patter + '').css("display", "none");
+    $('.' + patter + '').append('<div class="opct"></div>');
+    $('.opct').css("background", settings.backgroundColor);
+    $('.' + patter + '').css("z-index", "100001");
+    $('.' + patter + '').css("position", "fixed")
+    $('.' + patter + '').css("top", "0");
+    $('.' + patter + '').css("bottom", "0");
+    $('.' + patter + '').css("right", "0");
+    $('.' + patter + '').css("left", "0");
+    $('.' + patter + '').css("padding", "auto");
+    $('.' + patter + '').css("text-align", "center");
+    $('.' + patter + '').css("background", "none");
+    $('.' + patter + '').css("vertical-align", "vertical-align");
+    $(".videCont1").css("z-index", "100002");
+    $('.' + patter + '').append('<div class="closer_videopopup">&otimes;</div>');
+    $("." + settings.opener + "").on('click', function () {
+      $('.' + patter + "").show();
+      $('.'+settings.idvideo+'').trigger('play');
+    });
+    $(".closer_videopopup").on('click', function () {
+      if(settings.pausevideo==true){
+        $('.'+settings.idvideo+'').trigger('pause');
+      }else{
+        stopVideo();
+      }
+      $('.' + patter + "").hide();
+    });
+    return this.css({
+    });
+  };
+
+  $('.vidBox1').VideoPopUp({
+    backgroundColor: "#17212a",
+    opener: "video1",
+    maxheight: "340",
+    idvideo: "v1"
+  });
+  $('.vidBox2').VideoPopUp({
+    backgroundColor: "#17212a",
+    opener: "video2",
+    maxheight: "340",
+    idvideo: "v2"
+  });
+
 })(jQuery); // End of use strict

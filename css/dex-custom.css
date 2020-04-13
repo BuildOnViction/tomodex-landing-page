@@ -548,7 +548,11 @@ header.masthead .site-heading .subheading {
 .section-default {
     margin: 100px 0 0;
 }
-
+@media only screen and (max-width: 991px) {
+    .section-default {
+        margin: 50px 0 0;
+    }
+}
 .bg-coal {
     background-color: #262C40;
 }
@@ -611,3 +615,74 @@ header.masthead .site-heading .subheading {
 .social-list li a:hover {
     opacity: 1;
 }
+
+
+/* play video */
+.closer_videopopup{
+    position: absolute;
+    display: table-cell;
+    right: 2%;
+    top: 2%;
+    font-size: 32px;
+    text-align: center;
+    vertical-align: middle;
+    padding: auto;
+    cursor: default;
+    background: none;
+    border: none;
+    color: #ffffff;
+    z-index: 100004;
+    transition: all .3s;
+}
+.opct{
+    position: fixed;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.90;
+    opacity: 0.9;
+    transition: all .3s;
+}
+.vidBox1,
+.vidBox2 {
+    padding: 0 15px;
+    transition: all .3s;
+}
+.videCont1{
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+    height: 100%!important;
+}
+
+.yt_video{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+iframe{
+   position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 600px;
+    opacity: 1 !important;
+}
+@media only screen and (max-width: 767px) {
+    iframe{
+        height: 320px!important;
+    }
+}
+.video1,
+.video2{
+    cursor: pointer; cursor: hand;
+}
+
