@@ -106,4 +106,25 @@
     idvideo: "v2"
   });
 
+  $('#play-video-one').on('click', function(ev) {
+    $("#video-one")[0].src += "&autoplay=1";
+    ev.preventDefault();
+  });
+  $('#play-video-two').on('click', function(ev) {
+    $("#video-two")[0].src += "&autoplay=1";
+    ev.preventDefault();
+  });
+  $(".vidBox1 .closer_videopopup").on('click', function () {
+    var videoURL = $('#video-one').prop('src');
+    videoURL = videoURL.replace("&autoplay=1", "");
+    $('#video-one').prop('src','');
+    $('#video-one').prop('src',videoURL);
+  });
+  $(".vidBox2 .closer_videopopup").on('click', function () {
+    var videoURL = $('#video-two').prop('src');
+    videoURL = videoURL.replace("&autoplay=1", "");
+    $('#video-two').prop('src','');
+    $('#video-two').prop('src',videoURL);
+  });
+
 })(jQuery); // End of use strict
