@@ -74,6 +74,19 @@
         }
     }
 
+    function getTermSymbol(term) {
+        const days = (Number(term)/60/60/24)
+      
+        switch (true) {
+          case (days === 1):
+            return `${days.toFixed()} Day`
+          case (days <= 30):
+            return `${days.toFixed()} Days`
+          default:
+            return `${(days/30).toFixed()} Months`
+        }
+      }
+
     function parseMarketsStatistic(data) {
         return data.map(item => {
             const pair = pairs[item.lendingID.name]
@@ -85,12 +98,14 @@
             const price = item.close
             const priceUsd = item.closeBaseUsd
             const volume = (new BigNumber(item.volume).dividedBy(10 ** pair.lendingTokenDecimals)).toString(10)
+            const termSymbol = getTermSymbol(pair.term)
 
             const { pricePrecision } = calcPrecision(price)
             const { pricePrecision: priceUsdPrecision } = calcPrecision(priceUsd)
 
             return {
                 term: pair.term,
+                termSymbol,
                 lendingTokenSymbol: pair.lendingTokenSymbol,
                 change,
                 changeText,
@@ -119,7 +134,7 @@
                 <tr>
                     <th scope="row">
                         <a href=${window.location.origin}/trade/${item.term}-${item.lendingTokenSymbol} />
-                            <strong>${item.term}</strong> / ${item.lendingTokenSymbol}
+                            <strong>${item.termSymbol}</strong> / ${item.lendingTokenSymbol}
                         </a>
                     </th>
                     <td>
