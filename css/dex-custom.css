@@ -135,6 +135,7 @@ img::-moz-selection {
         background-color: rgba(37, 44, 64, 1);
         padding: 2rem 1rem;
         height: calc( 100vh - 60px);
+        transition: all .1s!important;
     }
     #mainNav .navbar-nav>li.nav-item {
         margin: 10px 0;
