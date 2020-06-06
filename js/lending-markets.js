@@ -85,6 +85,19 @@
           default:
             return `${days.toFixed()} Days`
         }
+    }
+
+    function getTermLink(term) {
+        const days = (Number(term)/60/60/24)
+      
+        switch (true) {
+          case (days === 1):
+            return `${days.toFixed()}_Day`
+          case (days <= 30):
+            return `${days.toFixed()}_Days`
+          default:
+            return `${days.toFixed()}_Days`
+        }
       }
 
     function parseMarketsStatistic(data) {
@@ -133,7 +146,7 @@
             return `
                 <tr>
                     <th scope="row">
-                        <a href=${window.location.origin}/trade/${item.term}-${item.lendingTokenSymbol} />
+                        <a href=${window.location.origin}/lending/${getTermLink(item.term)}-${item.lendingTokenSymbol} />
                             <strong>${item.termSymbol}</strong> / ${item.lendingTokenSymbol}
                         </a>
                     </th>
