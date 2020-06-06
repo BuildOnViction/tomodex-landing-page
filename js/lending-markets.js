@@ -83,7 +83,7 @@
           case (days <= 30):
             return `${days.toFixed()} Days`
           default:
-            return `${(days/30).toFixed()} Months`
+            return `${days.toFixed()} Days`
         }
       }
 
