@@ -160,7 +160,7 @@
         const { data, error } = await getMaketsStatistic()
         if (error) return
 
-        document.getElementById('number-coins').innerHTML = `${data.length} coins listed`
+        document.getElementById('number-coins').innerHTML = `${data.length} pairs listed`
 
         const marketsStatisticParsed = parseMarketsStatistic(data)
 
