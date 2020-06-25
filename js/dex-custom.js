@@ -75,7 +75,7 @@
     $('.' + patter + '').css("text-align", "center");
     $('.' + patter + '').css("background", "none");
     $('.' + patter + '').css("vertical-align", "vertical-align");
-    $(".videCont1").css("z-index", "100002");
+    $(".videoCont").css("z-index", "99");
     $('.' + patter + '').append('<div class="closer_videopopup">&otimes;</div>');
     $("." + settings.opener + "").on('click', function () {
       $('.' + patter + "").show();
@@ -105,26 +105,94 @@
     maxheight: "340",
     idvideo: "v2"
   });
+  $('.vidBox3').VideoPopUp({
+    backgroundColor: "#17212a",
+    opener: "video3",
+    maxheight: "340",
+    idvideo: "v3"
+  });
+  $('.vidBox4').VideoPopUp({
+    backgroundColor: "#17212a",
+    opener: "video4",
+    maxheight: "340",
+    idvideo: "v4"
+  });
 
   $('#play-video-one').on('click', function(ev) {
-    $("#video-one")[0].src += "&autoplay=1";
+    $("#video-one")[0].src += "?autoplay=1";
     ev.preventDefault();
   });
   $('#play-video-two').on('click', function(ev) {
-    $("#video-two")[0].src += "&autoplay=1";
+    $("#video-two")[0].src += "?autoplay=1";
+    ev.preventDefault();
+  });
+  $('#play-video-three').on('click', function(ev) {
+    $("#video-three")[0].src += "?autoplay=1";
+    ev.preventDefault();
+  });
+  $('#play-video-four').on('click', function(ev) {
+    $("#video-four")[0].src += "?autoplay=1";
     ev.preventDefault();
   });
   $(".vidBox1 .closer_videopopup").on('click', function () {
     var videoURL = $('#video-one').prop('src');
-    videoURL = videoURL.replace("&autoplay=1", "");
+    videoURL = videoURL.replace("?autoplay=1", "");
     $('#video-one').prop('src','');
     $('#video-one').prop('src',videoURL);
   });
   $(".vidBox2 .closer_videopopup").on('click', function () {
     var videoURL = $('#video-two').prop('src');
-    videoURL = videoURL.replace("&autoplay=1", "");
+    videoURL = videoURL.replace("?autoplay=1", "");
     $('#video-two').prop('src','');
     $('#video-two').prop('src',videoURL);
+  });
+  $(".vidBox3 .closer_videopopup").on('click', function () {
+    var videoURL = $('#video-three').prop('src');
+    videoURL = videoURL.replace("?autoplay=1", "");
+    $('#video-three').prop('src','');
+    $('#video-three').prop('src',videoURL);
+  });
+  $(".vidBox4 .closer_videopopup").on('click', function () {
+    var videoURL = $('#video-four').prop('src');
+    videoURL = videoURL.replace("?autoplay=1", "");
+    $('#video-four').prop('src','');
+    $('#video-four').prop('src',videoURL);
+  });
+
+  $(".variable").slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
 })(jQuery); // End of use strict

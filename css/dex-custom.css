@@ -108,7 +108,7 @@ img::-moz-selection {
 }
 @media only screen and (max-width: 991px) {
     #mainNav {
-        background-color: rgba(37, 44, 64, 1);
+        background-color: #242828;
     }
 }
 #mainNav .navbar-brand {
@@ -226,7 +226,8 @@ header.masthead {
     background-attachment: scroll;
     position: relative;
     background-size: cover;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    overflow-x: hidden;
 }
 .visual-chart {
     position: absolute;
@@ -242,14 +243,30 @@ header.masthead {
     height: 100%;
 }
 header.masthead .site-heading {
-    padding: 80px 0 40px;
+    padding: 150px 0 30px;
     color: white;
     position: relative;
     z-index: 9;
 }
 
+@media only screen and (max-width: 768px) {
+    header.masthead .site-heading {
+        padding: 100px 0 30px;
+    }
+}
+
+.banner-top {
+    padding: 150px 0 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .banner-top {
+        padding: 30px 0;
+    }
+}
+
 header.masthead .site-heading h1 {
-    font-size: 34px;
+    font-size: 28px;
     margin-top: 0;
     line-height: 1.4;
 }
@@ -262,10 +279,10 @@ header.masthead .site-heading .subheading {
 
 @media only screen and (min-width: 768px) {
     header.masthead .site-heading h1 {
-        font-size: 60px;
+        font-size: 34px;
     }
     header.masthead .site-heading .subheading {
-        font-size: 24px;
+        font-size: 18px;
     }
 }
 
@@ -378,7 +395,7 @@ header.masthead .site-heading .subheading {
     font-weight: 900;
     padding: 10px 25px;
     border-radius: 0;
-    min-width: 270px;
+    /* min-width: 270px; */
     border-width: 2px;
 }
 
@@ -637,7 +654,7 @@ header.masthead .site-heading .subheading {
 }
 .opct{
     position: fixed;
-    z-index: 100000;
+    z-index: 9;
     width: 100%;
     height: 100%;
     top: 0;
@@ -650,11 +667,13 @@ header.masthead .site-heading .subheading {
     transition: all .3s;
 }
 .vidBox1,
-.vidBox2 {
+.vidBox2,
+.vidBox3,
+.vidBox4 {
     padding: 0 15px;
     transition: all .3s;
 }
-.videCont1{
+.videoCont{
     position: relative;
     margin: auto;
     max-width: 1000px;
@@ -683,8 +702,90 @@ iframe{
     }
 }
 .video1,
-.video2{
+.video2,
+.video3,
+.video4{
     cursor: pointer; cursor: hand;
 }
 
 .pointer {cursor: pointer;}
+
+
+/**slick**/
+/* .slick-list {
+    height: 240px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+    .slick-list {
+        height: auto;
+        overflow: hidden;
+    }
+} */
+
+.slick-slide {
+    padding: 0 15px;
+}
+
+@media only screen and (min-width: 992px) {
+    .slick-list {
+        padding-right: 50px;
+        margin-right: -50px;
+    }
+    .slick-slide {
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .slick-list {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .slick-list {
+        padding-right: 100px;
+        margin-right: -150px;
+    }
+    .slick-slide {
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .slick-list {
+        padding-right: 200px;
+        margin-right: -250px;
+    }
+}
+
+.slick-dots{
+    text-align: right;
+    padding: 0;
+    margin: 25px 0 0 0;
+}
+.slick-dots li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 50%;
+}
+.slick-dots li.slick-active button{
+    background-color: #00e8b4;
+    opacity: .75;
+}

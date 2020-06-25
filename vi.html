@@ -33,6 +33,7 @@
     <link href="assets/fonts-icon/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
+    <link href="css/slick.css" rel="stylesheet">
     <link href="css/dex-custom.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_15_05_20.png">
@@ -90,19 +91,39 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead d-flex align-items-center" style="background-image: url('assets/images/home-bg.png')">
+    <header class="masthead d-flex align-items-center" style="background-color: #242828">
         <!-- <div class="visual-chart"><img src="assets/images/visual-chart.svg" alt="chart"></div> -->
         <div class="container">
-            <div class="site-heading">
-                <h1>Giao dịch tức thời<br>
-                    trực tiếp từ ví của bạn</h1>
-                <div class="subheading mt-3">Giao dịch ngang hàng 100% bảo mật - cung cấp bởi TomoChain</div>
-                <div class="box-btn mt-3 pt-3 mt-md-5 pt-md-5">
-                    <a class="btn btn-primary d-flex d-md-inline-flex align-items-center justify-content-center"
-                        href="/trade/"><i class="dex-multiline_chart"></i> Bắt đầu giao dịch</a>
-                    <span id="btn_scroll_to" class="btn btn-primary-transparent pointer d-flex d-md-inline-flex align-items-center justify-content-center ml-md-3 mt-3 mt-md-0">
-                        <i class="dex-play_circle_outline"></i> Xem video
-                    </a>
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="site-heading">
+                        <h1>Giao dịch tức thời<br>
+                            trực tiếp từ ví của bạn</h1>
+                        <div class="subheading mt-3">Giao dịch ngang hàng 100% bảo mật - cung cấp bởi TomoChain</div>
+                        <div class="box-btn mt-5">
+                            <a class="btn btn-primary d-flex d-md-inline-flex align-items-center justify-content-center"
+                                href="/trade/"><i class="dex-multiline_chart"></i> Bắt đầu giao dịch</a>
+                            <span id="btn_scroll_to" class="btn btn-primary-transparent pointer d-flex d-md-inline-flex align-items-center justify-content-center ml-md-3 mt-3 mt-md-0">
+                                <i class="dex-play_circle_outline"></i> Xem video
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="banner-top">
+                        <div class="variable slider">
+                            <div>
+                                <a href="https://medium.com/tomochain/tomochain-tomo-loan-available-on-tomodex-p2p-lending-market-4f71dcebd4f5" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/images/TomoChain (TOMO) Loan Available on TomoDEX P2P Lending Market.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://medium.com/tomochain/swap-trade-and-win-6-000-tomo-to-give-away-4b9199a47702" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/images/Swap, Trade, and Win! 6,000 TOMO to Give Away.jpeg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -192,9 +213,22 @@
                 <div class="col-lg-4">
                     <div class="common-preview mb-5 mt-5 mt-lg-0 pt-5 pt-lg-0">
                         <h2 class="common-title mr-4 mr-md-5">Tin tức</h2>
-                        <a class="common-link" href="#">Xem thêm</a>
+                        <a class="common-link" target="_blank" href="https://medium.com/tomochain/tagged/tomodex">Xem thêm</a>
                     </div>
                     <div class="box-post">
+                        <div class="post-preview">
+                            <div class="post-img">
+                                <a href="https://medium.com/tomochain/tomochain-tomo-loan-available-on-tomodex-p2p-lending-market-4f71dcebd4f5" target="_blank">
+                                    <img src="assets/images/TomoChain (TOMO) Loan Available on TomoDEX P2P Lending Market thumb.jpg" alt="TomoChain (TOMO) Loan Available on TomoDEX P2P Lending Market">
+                                </a>
+                            </div>
+                            <div class="post-infor">
+                                <a href="https://medium.com/tomochain/tomochain-tomo-loan-available-on-tomodex-p2p-lending-market-4f71dcebd4f5" target="_blank" class="post-title">
+                                    TomoChain (TOMO) Loan Available on TomoDEX P2P Lending Market
+                                </a>
+                                <p class="post-meta">Jun 12, 2020</p>
+                            </div>
+                        </div>
                         <div class="post-preview">
                             <div class="post-img">
                                 <a href="https://medium.com/tomochain/tomodex-giới-thiệu-tính-năng-cho-vay-tomodex-lending-94dd7dbab955" target="_blank">
@@ -303,34 +337,60 @@
                 </div>
                 <div id="watch-videos" class="col-lg-6">
                     <div class="tab-content mt-5" id="tradingTabContent">
-                        <div class="tab-pane fade show active" id="trading-spot" role="tabpanel" aria-labelledby="trading-spot-tab">
+                        <div class="tab-pane fade show active" id="trading-wrapunwrap" role="tabpanel" aria-labelledby="trading-wrapunwrap-tab">
                             <a href="javascript:void(0)" id="play-video-one" class="video1">
                                 <img class="w-100" src="assets/images/dex-video-tutorials-trading.png" alt="">
                             </a>
                             <div class="vidBox1">
-                                <div class="videCont1">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tYxDo1DE-Yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="videoCont">
+                                    <iframe id="video-one" class="player v1" src="https://www.youtube.com/embed/LtEUlP9-Apw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="tab-pane fade" id="trading-lending" role="tabpanel" aria-labelledby="trading-lending-tab">
+                        <div class="tab-pane fade" id="trading-spot" role="tabpanel" aria-labelledby="trading-spot-tab">
                             <a href="javascript:void(0)" id="play-video-two" class="video2">
                                 <img class="w-100" src="assets/images/dex-video-tutorials-trading.png" alt="">
                             </a>
                             <div class="vidBox2">
-                                <div class="videCont1">
-                                    <iframe id="video-two" class="player v2" src="https://www.youtube.com/embed/W581FlByr7I?rel=0" frameborder="0" allowfullscreen></iframe>
+                                <div class="videoCont">
+                                    <iframe id="video-two" class="player v2" src="https://www.youtube.com/embed/tYxDo1DE-Yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
+                        <div class="tab-pane fade" id="trading-borrowing" role="tabpanel" aria-labelledby="trading-borrowing-tab">
+                            <a href="javascript:void(0)" id="play-video-three" class="video3">
+                                <img class="w-100" src="assets/images/dex-video-tutorials-trading.png" alt="">
+                            </a>
+                            <div class="vidBox3">
+                                <div class="videoCont">
+                                    <iframe id="video-three" class="player v3" src="https://www.youtube.com/embed/kLFH1Is1_mA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="trading-lending" role="tabpanel" aria-labelledby="trading-lending-tab">
+                            <a href="javascript:void(0)" id="play-video-four" class="video4">
+                                <img class="w-100" src="assets/images/dex-video-tutorials-trading.png" alt="">
+                            </a>
+                            <div class="vidBox4">
+                                <div class="videoCont">
+                                    <iframe id="video-four" class="player v4" src="https://www.youtube.com/embed/8v5f88GPB0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <ul class="nav justify-content-center p-3" id="tradingTab" role="tablist">
                         <li class="nav-item">
-                            <a class="px-3 cursor-pointer active" id="trading-spot-tab" data-toggle="tab" href="#trading-spot" role="tab" aria-controls="trading-spot" aria-selected="true">Mua bán ngay</a>
+                            <a class="px-3 cursor-pointer active" id="trading-wrapunwrap-tab" data-toggle="tab" href="#trading-wrapunwrap" role="tab" aria-controls="trading-wrapunwrap" aria-selected="false">Wrap/Unwrap</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="px-3 cursor-pointer" id="trading-lending-tab" data-toggle="tab" href="#trading-lending" role="tab" aria-controls="trading-lending" aria-selected="false">Vay</a>
-                        </li> -->
+                        <li class="nav-item">
+                            <a class="px-3 cursor-pointer" id="trading-spot-tab" data-toggle="tab" href="#trading-spot" role="tab" aria-controls="trading-spot" aria-selected="true">Spot Trading</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="px-3 cursor-pointer" id="trading-borrowing-tab" data-toggle="tab" href="#trading-borrowing" role="tab" aria-controls="trading-borrowing" aria-selected="false">Borrowing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="px-3 cursor-pointer" id="trading-lending-tab" data-toggle="tab" href="#trading-lending" role="tab" aria-controls="trading-lending" aria-selected="false">Lending</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -545,6 +605,9 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/bignumber.min.js"></script>
+
+    <!-- Slick -->
+    <script src="js/slick.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/dex-custom.js"></script>
