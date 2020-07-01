@@ -106,7 +106,10 @@
 
             const open = item.open
             const close = item.close
-            const change = (close - open)*100/close
+            let change = 0
+            if (close) {
+                change = (close - open)*100/close
+            }
             const changeText = (change > 0) ? `+${change.toFixed(2)}` : (change < 0) ? change.toFixed(2) : change
             const price = item.close
             const priceUsd = item.closeBaseUsd

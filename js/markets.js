@@ -101,7 +101,10 @@
 
             const open = parsePrice(item.open, pair)
             const close = parsePrice(item.close, pair)
-            const change = (close - open)*100/close
+            let change = 0
+            if (close) {
+                change = (close - open)*100/close
+            }
             const changeText = (change > 0) ? `+${change.toFixed(2)}` : (change < 0) ? change.toFixed(2) : change
             const price = parsePrice(item.close, pair)
             const priceUsd = item.closeBaseUsd
