@@ -104,8 +104,8 @@
         return data.map(item => {
             const pair = pairs[item.lendingID.name]
 
-            const open = item.open
-            const close = item.close
+            const open = parseInt(item.open)
+            const close = parseInt(item.close)
             let change = 0
             if (close) {
                 change = (close - open)*100/close
