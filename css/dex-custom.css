@@ -628,10 +628,6 @@ header.masthead .site-heading .subheading {
     font-size: 20px;
     text-align: center;
     display: block;
-    opacity: 0.2;
-}
-.social-list li a:hover {
-    opacity: 1;
 }
 
 
