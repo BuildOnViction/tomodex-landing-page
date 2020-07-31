@@ -628,8 +628,11 @@ header.masthead .site-heading .subheading {
     font-size: 20px;
     text-align: center;
     display: block;
+    opacity: 0.5;
 }
-
+.social-list li:hover a {
+    opacity: 1;
+}
 
 /* play video */
 .closer_videopopup{
